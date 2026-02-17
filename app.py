@@ -7,6 +7,49 @@ from folium.plugins import MarkerCluster, Fullscreen
 from streamlit_folium import st_folium
 import random
 
+# 1. إعداد الصفحة
+st.set_page_config(
+    page_title="نظام إدارة العقارات - موريتانيا",
+    page_icon="🏠",
+    layout="wide",
+    initial_sidebar_state="expanded"
+)
+
+# 2. كود CSS (لإخفاء الزر وتجميل الواجهة)
+st.markdown("""
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800&display=swap');
+    
+    /* إخفاء عناصر Streamlit الافتراضية */
+    #MainMenu {visibility: hidden !important;}
+    footer {visibility: hidden !important;}
+    header[data-testid="stHeader"] {display: none !important;}
+    .stAppDeployButton {display: none !important;}
+    
+    /* التصميم العام */
+    *, html, body, [class*="css"] { font-family: 'Tajawal', sans-serif !important; direction: rtl !important; }
+    .main .block-container { direction: rtl !important; text-align: right !important; padding-top: 1rem !important; }
+    
+    /* الأزرار والبطاقات */
+    .stButton > button { background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%); color: white; border-radius: 10px; font-weight: bold; }
+    .header-style { background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%); padding: 25px; border-radius: 15px; color: white; text-align: center; margin-bottom: 30px; box-shadow: 0 4px 20px rgba(0,0,0,0.2); }
+    .metric-card { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); padding: 25px; border-radius: 15px; color: white; text-align: center; margin: 5px; box-shadow: 0 4px 15px rgba(0,0,0,0.2); }
+    .location-box { background: #f5f7fa; padding: 20px; border-radius: 15px; border: 2px solid #2a5298; margin-bottom: 20px; }
+</style>
+""", unsafe_allow_html=True)
+
+# 3. قاعدة البيانات والولايات (مختصرة لتقليل الحجم)
+# ... (هنا باقي الكود الخاص بك كما هو: WILAYA_MOUGHATAA_GPS, دوال قاعدة البيانات, الواجهة) ...
+# يمكنك نسخ باقي الكود من الرد السابق بدءاً من سطر WILAYA_MOUGHATAA_GPS
+import streamlit as st
+import pandas as pd
+from datetime import datetime, date
+import sqlite3
+import folium
+from folium.plugins import MarkerCluster, Fullscreen
+from streamlit_folium import st_folium
+import random
+
 # 1. إعداد الصفحة (يجب أن يكون أول أمر)
 st.set_page_config(
     page_title="نظام إدارة العقارات - موريتانيا",
