@@ -17,7 +17,7 @@ st.set_page_config(
 )
 
 # ==========================================
-# CSS الشامل للتصميم (النسخة الأصلية الكاملة)
+# CSS الشامل للتصميم (محدث لإخفاء Manage App)
 # ==========================================
 st.markdown("""
 <style>
@@ -29,163 +29,53 @@ st.markdown("""
         direction: rtl !important;
     }
     
-    /* الحاوية الرئيسية */
-    .main .block-container {
-        direction: rtl !important;
-        text-align: right !important;
-    }
-    
-    /* الشريط الجانبي */
-    [data-testid="stSidebar"] {
-        direction: rtl !important;
-        text-align: right !important;
-        right: 0 !important;
-        left: auto !important;
-    }
-    
-    [data-testid="stSidebar"] > div {
-        direction: rtl !important;
-    }
-    
-    /* جميع العناصر النصية */
-    .stMarkdown, .stText, p, span, label, h1, h2, h3, h4, h5, h6 {
-        direction: rtl !important;
-        text-align: right !important;
-    }
-    
-    /* حقول الإدخال */
-    .stTextInput > div > div > input,
-    .stTextArea > div > div > textarea,
-    .stNumberInput > div > div > input {
-        direction: rtl !important;
-        text-align: right !important;
-    }
-    
-    /* القوائم المنسدلة */
-    .stSelectbox > div > div,
-    .stMultiSelect > div > div {
-        direction: rtl !important;
-        text-align: right !important;
-    }
-    
-    [data-baseweb="select"] {
-        direction: rtl !important;
-    }
-    
-    [data-baseweb="select"] > div {
-        direction: rtl !important;
-        text-align: right !important;
-    }
-    
-    /* Radio buttons */
-    .stRadio > div {
-        direction: rtl !important;
-        text-align: right !important;
-    }
-    
-    .stRadio > div > label {
-        direction: rtl !important;
-        justify-content: flex-end !important;
-    }
-    
-    /* Checkboxes */
-    .stCheckbox > label {
-        direction: rtl !important;
-        flex-direction: row-reverse !important;
-    }
+    .main .block-container { direction: rtl !important; text-align: right !important; }
+    [data-testid="stSidebar"] { direction: rtl !important; text-align: right !important; right: 0 !important; left: auto !important; }
+    .stMarkdown, .stText, p, span, label, h1, h2, h3, h4, h5, h6 { direction: rtl !important; text-align: right !important; }
     
     /* الأزرار */
     .stButton > button {
-        direction: rtl !important;
-        background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
-        color: white;
-        border: none;
-        border-radius: 10px;
-        padding: 10px 30px;
-        font-size: 16px;
-        font-weight: bold;
-        width: 100%;
-        transition: all 0.3s ease;
+        direction: rtl !important; background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+        color: white; border: none; border-radius: 10px; padding: 10px 30px;
+        font-size: 16px; font-weight: bold; transition: all 0.3s ease;
     }
-    
-    .stButton > button:hover {
-        background: linear-gradient(135deg, #2a5298 0%, #1e3c72 100%);
-        transform: translateY(-2px);
-        box-shadow: 0 5px 15px rgba(0,0,0,0.3);
-    }
+    .stButton > button:hover { transform: translateY(-2px); box-shadow: 0 5px 15px rgba(0,0,0,0.3); }
     
     /* Headers مخصصة */
     .header-style {
-        background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
-        padding: 25px;
-        border-radius: 15px;
-        color: white;
-        text-align: center !important;
-        margin-bottom: 30px;
-        box-shadow: 0 4px 20px rgba(0,0,0,0.2);
-    }
-    
-    .header-style h1, .header-style h3, .header-style p {
-        text-align: center !important;
-        color: white !important;
+        background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%); padding: 25px;
+        border-radius: 15px; color: white; text-align: center !important;
+        margin-bottom: 30px; box-shadow: 0 4px 20px rgba(0,0,0,0.2);
     }
     
     /* بطاقات الإحصائيات */
     .metric-card {
-        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-        padding: 25px;
-        border-radius: 15px;
-        color: white;
-        text-align: center !important;
-        margin: 5px;
-        box-shadow: 0 4px 15px rgba(0,0,0,0.2);
-    }
-    
-    .metric-card h1, .metric-card h2, .metric-card p {
-        text-align: center !important;
-        color: white !important;
-        margin: 5px 0;
-    }
-    
-    /* بطاقات العقارات */
-    .property-card {
-        background: white;
-        padding: 20px;
-        border-radius: 15px;
-        box-shadow: 0 2px 15px rgba(0,0,0,0.1);
-        margin: 15px 0;
-        border-right: 5px solid #2a5298;
-        direction: rtl !important;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); padding: 25px;
+        border-radius: 15px; color: white; text-align: center !important;
+        margin: 5px; box-shadow: 0 4px 15px rgba(0,0,0,0.2);
     }
     
     /* صندوق الموقع */
     .location-box {
-        background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
-        padding: 20px;
-        border-radius: 15px;
-        border: 2px solid #2a5298;
-        margin-bottom: 20px;
-        direction: rtl !important;
+        background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%); padding: 20px;
+        border-radius: 15px; border: 2px solid #2a5298; margin-bottom: 20px; direction: rtl !important;
     }
     
     /* الخريطة */
-    .folium-map {
-        border-radius: 15px;
-        overflow: hidden;
-        box-shadow: 0 4px 15px rgba(0,0,0,0.2);
-    }
+    .folium-map { border-radius: 15px; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.2); }
     
-    /* إخفاء عناصر Streamlit الافتراضية */
-    #MainMenu {visibility: hidden;}
-    footer {visibility: hidden;}
+    /* ==========================================
+       إخفاء عناصر Streamlit الافتراضية
+       ========================================== */
+    #MainMenu {visibility: hidden !important;}
+    footer {visibility: hidden !important;}
+    header[data-testid="stHeader"] {display: none !important;}
+    .stAppDeployButton {display: none !important;}
+    #stAppDeployButton {display: none !important;}
     
-    /* تحسين المظهر العام */
-    .stApp {
-        background: linear-gradient(135deg, #f5f7fa 0%, #e4e8eb 100%);
-    }
+    .stApp { background: linear-gradient(135deg, #f5f7fa 0%, #e4e8eb 100%); }
 </style>
 """, unsafe_allow_html=True)
-
 # ==========================================
 # قاعدة بيانات الولايات والمقاطعات الكاملة
 # ==========================================
